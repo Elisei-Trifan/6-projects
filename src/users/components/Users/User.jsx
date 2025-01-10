@@ -1,9 +1,14 @@
-import React from 'react';
+import React from 'react'
+import plus from '../../assets/plus.svg'
 
 export const User = () => (
   <li>
     <div>
-      <img className="avatar" src="https://reqres.in/img/faces/1-image.jpg" alt="User" />
+      <img
+        className="avatar"
+        src="https://reqres.in/img/faces/1-image.jpg"
+        alt="User"
+      />
       <div>
         <h3>Amon Bower</h3>
         <p>
@@ -14,6 +19,6 @@ export const User = () => (
         </p>
       </div>
     </div>
-    <img className="action" src="/assets/plus.svg" alt="Action" />
+    <img className="action" src={plus} alt="plus" />
   </li>
-);
+)
