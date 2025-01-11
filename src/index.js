@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client'
 // import Count from './count/Count'
 // import Quiz from './quiz/Quiz'
 import Users from './users/Users'
+import Converter from './currency-converter/Converter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -13,6 +14,7 @@ root.render(
     {/* <Modal2 />
     <Count /> */}
     {/* <Quiz /> */}
-    <Users />
+    {/* <Users /> */}
+    <Converter />
   </React.StrictMode>
 )
