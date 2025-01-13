@@ -1,21 +1,22 @@
-import React from 'react';
-import './index.scss';
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import { Collection } from './Collection'
+import './index3.scss'
 
-function Collection({ name, images }) {
-  return (
-    <div className="collection">
-      <img className="collection__big" src={images[0]} alt="Item" />
-      <div className="collection__bottom">
-        <img className="collection__mini" src={images[1]} alt="Item" />
-        <img className="collection__mini" src={images[2]} alt="Item" />
-        <img className="collection__mini" src={images[3]} alt="Item" />
-      </div>
-      <h4>{name}</h4>
-    </div>
-  );
-}
+function Photos() {
+  const [collection, setCollection] = React.useState([])
 
-function App() {
+  React.useEffect(() => {
+    fetch('https://f00c1997ad072b96.mokky.dev/collections')
+      .then((res) => res.json())
+      .then((json) => {
+        setCollection(json)
+        console.log(json)
+      })
+      .catch((err) => console.warn(err))
+      .finally(() => console.log('Конец запроса'))
+  }, [])
+
   return (
     <div className="App">
       <h1>Моя коллекция фотографий</h1>
@@ -46,7 +47,7 @@ function App() {
         <li>3</li>
       </ul>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Photos

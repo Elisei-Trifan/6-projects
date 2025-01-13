@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom/client'
 // import Modal2 from './modal/Modal2'
 // import Count from './count/Count'
 // import Quiz from './quiz/Quiz'
-import Users from './users/Users'
-import Converter from './currency-converter/Converter'
+// import Users from './users/Users'
+// import Converter from './currency-converter/Converter'
+import Photos from './photos/Photos'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -15,6 +16,7 @@ root.render(
     <Count /> */}
     {/* <Quiz /> */}
     {/* <Users /> */}
-    <Converter />
+    {/* <Converter /> */}
+    <Photos />
   </React.StrictMode>
 )
